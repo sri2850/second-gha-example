@@ -13,6 +13,6 @@ jobs:
     - name: Install dependencies
       run: npm install ${{ github.workspace }}/code/02-finished
     - name: Run tests
-      run: npm test ${{ github.workspace }}/code/02-finished
+      run: npm run test ${{ github.workspace }}/code/02-finished
         
   
