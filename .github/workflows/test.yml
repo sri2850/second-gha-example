@@ -6,4 +6,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4.2.1
+    - name: Install Node JS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+    - name: Install dependencies
+      run: npm ci
+    - name: Run tests
+      run: npm test
+        
   
