@@ -1,4 +1,4 @@
-name: test project
+name: Deploy project
 on: push
 jobs:
   test:
@@ -13,6 +13,20 @@ jobs:
     - name: Install dependencies
       run: npm install ${{ github.workspace }}/code/02-finished
     - name: Run tests
-      run: npm run test ${{ github.workspace }}/code/02-finished
+      run: npm run test ${{ github.workspace }}/code/02-finished/package.json
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4.2.1
+    - name: Install Node JS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+    - name: Install dependencies
+      run: npm install ${{ github.workspace }}/code/02-finished
+    - name: build the project
+      run: npm run build ${{ github.workspace }}/code/02-finished
+    
         
   
