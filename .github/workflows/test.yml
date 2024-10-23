@@ -27,6 +27,8 @@ jobs:
       run: npm install ${{ github.workspace }}/code/02-finished
     - name: build the project
       run: npm run build ${{ github.workspace }}/code/02-finished
+    - name: deploy
+      run: echo deploying
     
         
   
