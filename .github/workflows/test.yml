@@ -11,8 +11,8 @@ jobs:
       with:
         node-version: 20
     - name: Install dependencies
-      run: npm install ${{ github.workspace }}/code/02-finished/package.json
+      run: npm install ${{ github.workspace }}/code/02-finished
     - name: Run tests
-      run: npm test ${{ github.workspace }}/code/02-finished/package.json
+      run: npm test ${{ github.workspace }}/code/02-finished
         
   
